@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpace - Mental Health for Students</title>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="scrollToTop()">
+                <i class="fas fa-brain"></i> MindSpace
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#app">App</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#therapists">Therapists</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Your Mental Health Journey Starts Here</h1>
+                <p>MindSpace provides students with the tools they need to manage stress, track mood, and build healthy mental habits.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fab fa-apple"></i> Download for iOS</a>
+                    <a href="#" class="btn btn-secondary"><i class="fab fa-google-play"></i> Download for Android</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Images/hero-image.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features fade-in" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features for Your Mental Health</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Mood Tracker</h3>
+                    <p>Track your daily emotions and identify patterns in your mental health journey.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lungs"></i></div>
+                    <h3>Breathing Exercises</h3>
+                    <p>Access guided breathing exercises designed to reduce anxiety and stress.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-book"></i></div>
+                    <h3>Personal Journal</h3>
+                    <p>Express your thoughts and reflect on your experiences privately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots -->
+    <section class="app-screenshots fade-in" id="app">
+        <div class="container">
+            <h2 class="section-title">See MindSpace in Action</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-track" id="carouselTrack">
+                         <div class="carousel-slide">
+                            <img src="Images/app-screenshot-1.png" alt="Mood Tracker Screenshot">
+                            <p>Track your mood daily and discover patterns.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="Images/app-screenshot-2.png" alt="Breathing Exercise Screenshot">
+                            <p>Reduce stress with guided breathing exercises.</p>
+                        </div>
+                        <div class="carousel-slide">
+                             <img src="Images/app-screenshot-3.png" alt="Personal Journal Screenshot">
+                             <p>Keep a journal to express your thoughts and growth.</p>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                    <button class="carousel-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials fade-in" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Students Are Saying</h2>
+            <div class="testimonial-filters">
+                <button class="filter-btn active" onclick="filterTestimonials('all', this)">All</button>
+                <button class="filter-btn" onclick="filterTestimonials('students', this)">Students</button>
+                <button class="filter-btn" onclick="filterTestimonials('grads', this)">Recent Grads</button>
+            </div>
+            <div class="testimonials-grid" id="testimonialsGrid">
+                <!-- Testimonial Cards -->
+                <div class="testimonial-card" data-category="students">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"MindSpace helped me during finals. The breathing exercises were great."</p>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-role">Student</div>
+                </div>
+                <div class="testimonial-card" data-category="grads">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Wish I had this during college. It would’ve made a big difference."</p>
+                    <div class="testimonial-author">Marcus Rodriguez</div>
+                    <div class="testimonial-role">Graduate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Therapists -->
+    <section class="therapists fade-in" id="therapists">
+        <div class="container">
+            <h2 class="section-title">Connect with Verified Therapists</h2>
+            <div class="therapists-grid">
+                <div class="therapist-card">
+                    <div class="verification-badge"><i class="fas fa-check"></i></div>
+                    <img src="Images/therapist-1.png" alt="Therapist 1" class="therapist-photo">
+                    <div class="therapist-name">Dr. Jamal Brooks</div>
+                     <div class="therapist-title">Counseling Psychologist</div>
+                     <p class="therapist-bio">Specialist in cognitive-behavioral therapy and student wellness.</p>
+                    </div>
+                    <div class="therapist-card">
+                        <div class="verification-badge"><i class="fas fa-check"></i></div>
+                        <img src="Images/therapist-2.png" alt="Therapist 2" class="therapist-photo">
+                        <div class="therapist-name">Dr. Emily Rivers</div>
+                        <div class="therapist-title">Mental Health Coach</div>
+                        <p class="therapist-bio">Focus on stress management, productivity, and self-esteem.</p>
+                    </div>
+                    <div class="therapist-card">
+                        <div class="verification-badge"><i class="fas fa-check"></i></div>
+                        <img src="Images/therapist-3.png" alt="Therapist 3" class="therapist-photo">
+                        <div class="therapist-name">Dr. Noah Greene</div>
+                        <div class="therapist-title">Clinical Therapist</div>
+                        <p class="therapist-bio">Experienced in anxiety, burnout, and academic pressure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Call to Action -->
+    <section class="cta fade-in" id="download">
+        <div class="container">
+            <h2>Start Your Mental Health Journey</h2>
+            <p>Join thousands of students improving their wellbeing with MindSpace.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-white"><i class="fab fa-apple"></i> iOS</a>
+                <a href="#" class="btn btn-white"><i class="fab fa-google-play"></i> Android</a>
+                <a href="#" class="btn btn-secondary"><i class="fas fa-bell"></i> Join Waitlist</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> MindSpace</h3>
+                    <p>Empowering students through mental health support.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MindSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
