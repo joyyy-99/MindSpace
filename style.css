@@ -162,7 +162,7 @@ body::before {
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    color: #1a202c;
+    color: #9a2ffe;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     line-height: 1.2;
     opacity: 0;
@@ -193,10 +193,10 @@ body::before {
 }
 
 .btn {
-    padding: 1.2rem 2.5rem;
+    padding: 0.8rem 1.8rem;
     border: none;
     border-radius: 60px;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -264,9 +264,6 @@ body::before {
     max-width: 100%;
     height: auto;
     border-radius: 25px;
-    box-shadow: 
-        0 25px 80px rgba(139, 92, 246, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 /* Sections */
